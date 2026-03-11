@@ -123,35 +123,52 @@ export default function Portfolio() {
           <h2 className="text-4xl font-bold">Certifications</h2>
           <div className="h-[1px] flex-grow bg-white/10"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {/* Sertifikat Baru: UTDU */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {/* HCIA-openGauss V1.0 */}
           <CertificateCard
-            title="Emergency Response Volunteer"
-            issuer="UTDU UMN"
-            date="Nov 2025"
-            desc="Active participation in emergency response simulations and campus safety coordination."
+            title="HCIA-openGauss V1.0"
+            issuer="Huawei"
+            date="July 15, 2025"
+            desc="Successfully completed the study and exam of HCIA-openGauss V1.0 Course."
+            link="/certificates/huaweiV10.png"
           />
 
+          {/* HCIA-AI V3.5 */}
           <CertificateCard
             title="HCIA-AI V3.5"
             issuer="Huawei"
             date="2025"
-            desc="Artificial Intelligence foundations and implementation certification."
+            desc="Certification in Artificial Intelligence foundations and Huawei AI solutions."
+            link="/certificates/huaweiV35.png"
           />
 
+          {/* Emergency Response Volunteer */}
           <CertificateCard
-            title="HCIA-openGauss V1.0"
-            issuer="Huawei"
-            date="2025"
-            desc="Specialized in openGauss database architecture and management."
+            title="Emergency Response Volunteer"
+            issuer="UTDU UMN"
+            date="Nov 27, 2025"
+            desc="Active participation in campus-wide emergency response and safety simulations."
+            link="/certificates/k3l.png"
           />
 
+          {/* Python Intermediate */}
           <CertificateCard
-            title="Intermediate Python"
+            title="Python Intermediate"
             issuer="Sololearn"
-            date="2025"
-            desc="Advanced Python programming and data structure implementation."
+            date="May 22, 2025"
+            desc="Demonstrated theoretical and practical understanding of intermediate Python concepts."
+            link="/certificates/python intermediate sololearn.pdf"
+          />
+
+          {/* Python Introduction */}
+          <CertificateCard
+            title="Python Introduction"
+            issuer="Sololearn"
+            date="Nov 18, 2025"
+            desc="Foundational certification in Python programming and basic data structures."
+            link="/certificates/python introduction sololearn.pdf"
           />
 
         </div>
@@ -212,9 +229,9 @@ function ProjectCard({ title, tags, desc }: any) {
   );
 }
 
-function CertificateCard({ title, issuer, date, desc }: any) {
+function CertificateCard({ title, issuer, date, desc, link }: any) {
   return (
-    <div className="group bg-[#0d0f14] border border-white/5 p-6 rounded-2xl hover:bg-[#12141a] transition-all border-l-4 border-l-blue-600">
+    <div className="group bg-[#0d0f14] border border-white/5 p-6 rounded-2xl hover:bg-[#12141a] transition-all border-l-4 border-l-blue-600 flex flex-col h-full">
       <div className="flex justify-between items-start mb-4">
         <div className="bg-blue-600/10 p-2 rounded-lg">
           <Award className="w-6 h-6 text-blue-500" />
@@ -223,7 +240,19 @@ function CertificateCard({ title, issuer, date, desc }: any) {
       </div>
       <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{title}</h3>
       <p className="text-sm text-gray-400 mt-1 mb-3">{issuer}</p>
-      <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
+      <p className="text-xs text-gray-500 leading-relaxed flex-grow">{desc}</p>
+
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-2 text-xs font-bold text-blue-500 hover:text-blue-400 transition-colors group/link"
+        >
+          VIEW CERTIFICATE
+          <ExternalLink size={14} className="group-hover/link:translate-x-1 transition-transform" />
+        </a>
+      )}
     </div>
   );
 }

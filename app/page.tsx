@@ -197,8 +197,8 @@ export default function Portfolio() {
             title="Spotify Popularity Predictor"
             tags={["Python", "Machine Learning"]}
             desc="A machine learning project that predicts Spotify song popularity based on historical data and audio features."
-            githubLink="#"
-            demoLink="#"
+            githubLink="https://github.com/NathanaelAxl/Project_ML_sem_5.git"
+            demoLink="https://github.com/NathanaelAxl/Project_ML_sem_5.git"
           />
           <ProjectCard
             title="Isyara - UI/UX Design"

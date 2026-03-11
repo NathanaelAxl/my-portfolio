@@ -100,20 +100,63 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* PROJECTS */}
+      {/* PROJECTS SECTION */}
       <section id="projects" className="max-w-5xl mx-auto py-24 px-6">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          {/* Project 1: JelajahIsoematra */}
           <ProjectCard
             title="JelajahIsoematra"
             tags={["Next.js", "TailwindCSS"]}
-            desc="A pixel-style educational game website focused on Indonesian culture and heritage."
+            desc="A pixel-style educational game website focused on Indonesian culture and heritage, co-developed to promote local wisdom."
+            githubLink="#"
+            demoLink="#"
           />
+
+          {/* Project 2: Spotify Popularity Predictor */}
           <ProjectCard
             title="Spotify Popularity Predictor"
             tags={["Python", "Machine Learning"]}
-            desc="A data science project predicting song popularity using machine learning models."
+            desc="A machine learning project that predicts Spotify song popularity based on historical data and audio features."
+            githubLink="#"
+            demoLink="#"
           />
+
+          {/* Project 3: Isyara (UI/UX) */}
+          <ProjectCard
+            title="Isyara - UI/UX Design"
+            tags={["Figma", "Android", "Kotlin"]}
+            desc="Co-developed a native Android app for community birthday reminders. Managed the UI/UX design and core logic with Firebase integration."
+            githubLink="#"
+            demoLink="https://www.figma.com/design/lRVxUT0tk1L0wmZJ5FwVyi/Untitled?node-id=0-1"
+          />
+
+          {/* Project 4: Tabungin (Mobile App) */}
+          <ProjectCard
+            title="Tabungin - Mobile App"
+            tags={["Kotlin", "Android Studio", "Firebase"]}
+            desc="A native Android application featuring automated notifications and real-time user management for financial tracking."
+            githubLink="https://github.com/NathanaelAxl/MAP_MID_TERM.git"
+            demoLink="#"
+          />
+
+          {/* Project 5: BALLVENTURE (Featured - Wide Card) */}
+          <div className="md:col-span-2 relative group">
+            {/* Badge HAKI Khusus */}
+            <div className="absolute top-4 right-4 z-10 bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+              🏆 HAKI CERTIFIED
+            </div>
+
+            <ProjectCard
+              title="BALLVENTURE - 3D Game Development"
+              tags={["Unity", "C#", "Intellectual Property"]}
+              desc="Co-developed a 3D rolling ball game with physics-based controls and dynamic obstacles. Officially HAKI certified by Universitas Multimedia Nusantara."
+              demoLink="https://umn.itch.io/ballventure"
+              githubLink="#"
+            />
+          </div>
         </div>
       </section>
 
@@ -171,6 +214,13 @@ export default function Portfolio() {
             link="/certificates/python introduction sololearn.pdf"
           />
 
+          <CertificateCard
+            title="Intellectual Property Rights (HAKI)"
+            issuer="Kemenkumham & UMN"
+            date="2026"
+            desc="Official registration of 'BALLVENTURE' as an Intellectual Property under the Game Development category."
+            link="https://umn.itch.io/ballventure"
+          />
         </div>
       </section>
 
@@ -211,9 +261,9 @@ function ExperienceCard({ title, company, date, desc }: any) {
   );
 }
 
-function ProjectCard({ title, tags, desc }: any) {
+function ProjectCard({ title, tags, desc, githubLink, demoLink }: any) {
   return (
-    <div className="group bg-[#0d0f14] border border-white/5 p-8 rounded-3xl hover:border-white/20 transition-all flex flex-col h-full">
+    <div className="group bg-[#0d0f14] border border-white/5 p-8 rounded-3xl hover:border-white/20 transition-all flex flex-col h-full relative">
       <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">{title}</h3>
       <div className="flex gap-2 mb-6 flex-wrap">
         {tags.map((t: string) => (
@@ -221,9 +271,21 @@ function ProjectCard({ title, tags, desc }: any) {
         ))}
       </div>
       <p className="text-gray-400 mb-8 leading-relaxed flex-grow">{desc}</p>
+
       <div className="flex gap-6">
-        <button className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition"><Github size={16} /> Source</button>
-        <button className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition"><ExternalLink size={16} /> Demo</button>
+        {/* Cek jika githubLink ada, maka tampilkan linknya */}
+        {githubLink && (
+          <a href={githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition cursor-pointer">
+            <Github size={16} /> Source
+          </a>
+        )}
+
+        {/* Cek jika demoLink ada, maka tampilkan linknya */}
+        {demoLink && (
+          <a href={demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition cursor-pointer">
+            <ExternalLink size={16} /> Demo
+          </a>
+        )}
       </div>
     </div>
   );

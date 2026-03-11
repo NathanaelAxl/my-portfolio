@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink, MapPin, Award } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, MapPin, Award, MessageCircle } from "lucide-react";
 
 export default function Portfolio() {
   return (
@@ -14,9 +14,13 @@ export default function Portfolio() {
             <a href="#projects" className="hover:text-white transition">Projects</a>
             <a href="#certificates" className="hover:text-white transition">Certificates</a>
           </div>
-          <button className="bg-[#1d1f24] hover:bg-[#2a2d35] px-5 py-2 rounded-lg text-sm font-semibold border border-white/10 transition">
+          {/* NAVBAR */}
+          <a
+            href="#contact"
+            className="bg-[#1d1f24] hover:bg-[#2a2d35] px-5 py-2 rounded-lg text-sm font-semibold border border-white/10 transition"
+          >
             Contact
-          </button>
+          </a>
         </div>
       </nav>
 
@@ -31,10 +35,12 @@ export default function Portfolio() {
           <span>South Tangerang, Banten, Indonesia</span>
         </div>
 
+        {/* Update Social Links di Hero */}
         <div className="flex flex-wrap justify-center gap-4">
-          <SocialLink href="https://github.com/" icon={<Github size={20} />} label="GitHub" />
-          <SocialLink href="https://linkedin.com/in/" icon={<Linkedin size={20} />} label="LinkedIn" />
-          <SocialLink href="mailto:email@kamu.com" icon={<Mail size={20} />} label="Email" />
+          <SocialLink href="https://github.com/NathanaelAxl" icon={<Github size={20} />} label="GitHub" />
+          <SocialLink href="https://www.linkedin.com/in/nathanaelaxljch/" icon={<Linkedin size={20} />} label="LinkedIn" />
+          <SocialLink href="mailto:naxljaconiah@gmail.com" icon={<Mail size={20} />} label="Email" />
+          <SocialLink href="https://wa.link/xyq4cy" icon={<MessageCircle size={20} />} label="WhatsApp" />
         </div>
       </section>
 
@@ -52,7 +58,7 @@ export default function Portfolio() {
           </div>
           <div className="text-gray-400 text-lg leading-relaxed space-y-4">
             <p>
-              A <strong>Purple Team</strong>Enthusiast with hands-on experience in defensive monitoring (Elastic, TheHive) and offensive testing (Kali, Burp Suite).
+              A <strong>Purple Team</strong> Enthusiast with hands-on experience in defensive monitoring (Elastic, TheHive) and offensive testing (Kali, Burp Suite).
             </p>
             <p>
               I manage a personal home lab for security research and Cyber Threat Intelligence (CTI) analysis, dedicated to securing systems through a balanced, full-spectrum security approach.
@@ -69,8 +75,7 @@ export default function Portfolio() {
             title="Back End Developer Intership"
             company="MobileCom"
             date="Jan 2026 - Present"
-            desc="Contributed to the development and maintenance of server-side logic using Go, 
-            optimizing database queries with PostgreSQL, and conducting rigorous API testing and debugging using Hoppscotch and Postman to ensure high-performance integration for remote-scale applications"
+            desc="Contributed to the development and maintenance of server-side logic using Go, optimizing database queries with PostgreSQL, and conducting rigorous API testing and debugging using Hoppscotch and Postman to ensure high-performance integration for remote-scale applications."
           />
           <ExperienceCard
             title="Laboratory Teaching Assistant"
@@ -82,8 +87,7 @@ export default function Portfolio() {
             title="Coding Mentor"
             company="Timedoor"
             date="Feb 2025 - Present"
-            desc="Guiding and mentoring students in mastering Python programming fundamentals, 
-            while simplifying complex coding concepts through hands-on projects in a hybrid learning environment.."
+            desc="Guiding and mentoring students in mastering Python programming fundamentals, while simplifying complex coding concepts through hands-on projects in a hybrid learning environment."
           />
           <ExperienceCard
             title="Head of Project Manager"
@@ -103,10 +107,7 @@ export default function Portfolio() {
       {/* PROJECTS SECTION */}
       <section id="projects" className="max-w-5xl mx-auto py-24 px-6">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          {/* Project 1: JelajahIsoematra */}
           <ProjectCard
             title="JelajahIsoematra"
             tags={["Next.js", "TailwindCSS"]}
@@ -114,8 +115,6 @@ export default function Portfolio() {
             githubLink="#"
             demoLink="#"
           />
-
-          {/* Project 2: Spotify Popularity Predictor */}
           <ProjectCard
             title="Spotify Popularity Predictor"
             tags={["Python", "Machine Learning"]}
@@ -123,38 +122,30 @@ export default function Portfolio() {
             githubLink="#"
             demoLink="#"
           />
-
-          {/* Project 3: Isyara (UI/UX) */}
           <ProjectCard
             title="Isyara - UI/UX Design"
             tags={["Figma", "Android", "Kotlin"]}
             desc="Co-developed a native Android app for community birthday reminders. Managed the UI/UX design and core logic with Firebase integration."
-            githubLink="#"
+            githubLink="https://www.figma.com/design/lRVxUT0tk1L0wmZJ5FwVyi/Untitled?node-id=0-1"
             demoLink="https://www.figma.com/design/lRVxUT0tk1L0wmZJ5FwVyi/Untitled?node-id=0-1"
           />
-
-          {/* Project 4: Tabungin (Mobile App) */}
           <ProjectCard
             title="Tabungin - Mobile App"
             tags={["Kotlin", "Android Studio", "Firebase"]}
             desc="A native Android application featuring automated notifications and real-time user management for financial tracking."
             githubLink="https://github.com/NathanaelAxl/MAP_MID_TERM.git"
-            demoLink="#"
+            demoLink="https://github.com/NathanaelAxl/MAP_MID_TERM.git"
           />
-
-          {/* Project 5: BALLVENTURE (Featured - Wide Card) */}
           <div className="md:col-span-2 relative group">
-            {/* Badge HAKI Khusus */}
             <div className="absolute top-4 right-4 z-10 bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-sm">
               🏆 HAKI CERTIFIED
             </div>
-
             <ProjectCard
               title="BALLVENTURE - 3D Game Development"
               tags={["Unity", "C#", "Intellectual Property"]}
               desc="Co-developed a 3D rolling ball game with physics-based controls and dynamic obstacles. Officially HAKI certified by Universitas Multimedia Nusantara."
               demoLink="https://umn.itch.io/ballventure"
-              githubLink="#"
+              githubLink="https://umn.itch.io/ballventure"
             />
           </div>
         </div>
@@ -168,52 +159,20 @@ export default function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          {/* HCIA-openGauss V1.0 */}
           <CertificateCard
             title="HCIA-openGauss V1.0"
             issuer="Huawei"
-            date="July 15, 2025"
+            date="Jul 15, 2025"
             desc="Successfully completed the study and exam of HCIA-openGauss V1.0 Course."
             link="/certificates/huaweiV10.png"
           />
-
-          {/* HCIA-AI V3.5 */}
           <CertificateCard
             title="HCIA-AI V3.5"
             issuer="Huawei"
-            date="2025"
+            date="Mar 9, 2025"
             desc="Certification in Artificial Intelligence foundations and Huawei AI solutions."
             link="/certificates/huaweiV35.png"
           />
-
-          {/* Emergency Response Volunteer */}
-          <CertificateCard
-            title="Emergency Response Volunteer"
-            issuer="UTDU UMN"
-            date="Nov 27, 2025"
-            desc="Active participation in campus-wide emergency response and safety simulations."
-            link="/certificates/k3l.png"
-          />
-
-          {/* Python Intermediate */}
-          <CertificateCard
-            title="Python Intermediate"
-            issuer="Sololearn"
-            date="May 22, 2025"
-            desc="Demonstrated theoretical and practical understanding of intermediate Python concepts."
-            link="/certificates/python intermediate sololearn.pdf"
-          />
-
-          {/* Python Introduction */}
-          <CertificateCard
-            title="Python Introduction"
-            issuer="Sololearn"
-            date="Nov 18, 2025"
-            desc="Foundational certification in Python programming and basic data structures."
-            link="/certificates/python introduction sololearn.pdf"
-          />
-
           <CertificateCard
             title="Intellectual Property Rights (HAKI)"
             issuer="Kemenkumham & UMN"
@@ -221,14 +180,103 @@ export default function Portfolio() {
             desc="Official registration of 'BALLVENTURE' as an Intellectual Property under the Game Development category."
             link="https://umn.itch.io/ballventure"
           />
+          <CertificateCard
+            title="Emergency Response Volunteer"
+            issuer="UTDU UMN"
+            date="Nov 27, 2025"
+            desc="Active participation in campus-wide emergency response and safety simulations."
+            link="/certificates/k3l.png"
+          />
+          <CertificateCard
+            title="Python Intermediate"
+            issuer="Sololearn"
+            date="May 22, 2025"
+            desc="Demonstrated theoretical and practical understanding of intermediate Python concepts."
+            link="/certificates/python intermediate sololearn.pdf"
+          />
+          <CertificateCard
+            title="Python Introduction"
+            issuer="Sololearn"
+            date="Feb 14, 2025"
+            desc="Foundational certification in Python programming and basic data structures."
+            link="/certificates/python introduction sololearn.pdf"
+          />
         </div>
       </section>
 
+      {/* CONTACT SECTION */}
+      <section id="contact" className="max-w-5xl mx-auto py-24 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
+        <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
+          I'm always open to new opportunities, collaborations, or just a friendly chat about cybersecurity and tech!
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {/* WhatsApp Card */}
+          <a href="https://wa.link/xyq4cy" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-4 bg-[#0d0f14] border border-white/5 p-6 rounded-2xl hover:border-green-500/50 transition-all group">
+            <div className="bg-green-500/10 p-3 rounded-xl text-green-500 group-hover:scale-110 transition">
+              <MessageCircle size={24} />
+            </div>
+            <div className="text-left">
+              <p className="text-xs text-gray-500 uppercase font-bold">WhatsApp</p>
+              <p className="font-semibold">Chat with me</p>
+            </div>
+          </a>
+
+          {/* Email Card */}
+          <a href="mailto:naxljaconiah@gmail.com"
+            className="flex items-center gap-4 bg-[#0d0f14] border border-white/5 p-6 rounded-2xl hover:border-red-500/50 transition-all group">
+            <div className="bg-red-500/10 p-3 rounded-xl text-red-500 group-hover:scale-110 transition">
+              <Mail size={24} />
+            </div>
+            <div className="text-left">
+              <p className="text-xs text-gray-500 uppercase font-bold">Email</p>
+              <p className="font-semibold">naxljaconiah@gmail.com</p>
+            </div>
+          </a>
+
+          {/* LinkedIn Card */}
+          <a href="https://www.linkedin.com/in/nathanaelaxljch/" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-4 bg-[#0d0f14] border border-white/5 p-6 rounded-2xl hover:border-blue-400/50 transition-all group">
+            <div className="bg-blue-400/10 p-3 rounded-xl text-blue-400 group-hover:scale-110 transition">
+              <Linkedin size={24} />
+            </div>
+            <div className="text-left">
+              <p className="text-xs text-gray-500 uppercase font-bold">LinkedIn</p>
+              <p className="font-semibold">Nathanael Axl Jaconiah</p>
+            </div>
+          </a>
+
+          {/* GitHub Card */}
+          <a href="https://github.com/NathanaelAxl" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-4 bg-[#0d0f14] border border-white/5 p-6 rounded-2xl hover:border-purple-500/50 transition-all group">
+            <div className="bg-purple-500/10 p-3 rounded-xl text-purple-500 group-hover:scale-110 transition">
+              <Github size={24} />
+            </div>
+            <div className="text-left">
+              <p className="text-xs text-gray-500 uppercase font-bold">GitHub</p>
+              <p className="font-semibold">@NathanaelAxl</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER - Updated with correct links */}
       <footer className="py-20 text-center border-t border-white/5 text-gray-600">
         <div className="flex justify-center gap-6 mb-4">
-          <Github size={18} className="hover:text-white cursor-pointer transition-colors" />
-          <Linkedin size={18} className="hover:text-white cursor-pointer transition-colors" />
-          <Mail size={18} className="hover:text-white cursor-pointer transition-colors" />
+          <a href="https://github.com/NathanaelAxl" target="_blank" rel="noopener noreferrer">
+            <Github size={20} className="hover:text-white cursor-pointer transition-colors" />
+          </a>
+          <a href="https://www.linkedin.com/in/nathanaelaxljch/" target="_blank" rel="noopener noreferrer">
+            <Linkedin size={20} className="hover:text-white cursor-pointer transition-colors" />
+          </a>
+          <a href="mailto:naxljaconiah@gmail.com">
+            <Mail size={20} className="hover:text-white cursor-pointer transition-colors" />
+          </a>
+          <a href="https://wa.link/xyq4cy" target="_blank" rel="noopener noreferrer">
+            <MessageCircle size={20} className="hover:text-white cursor-pointer transition-colors" />
+          </a>
         </div>
         <p className="text-xs tracking-widest uppercase">© 2026 Nathanael Axl Jaconiah. All rights reserved.</p>
       </footer>
@@ -273,15 +321,12 @@ function ProjectCard({ title, tags, desc, githubLink, demoLink }: any) {
       <p className="text-gray-400 mb-8 leading-relaxed flex-grow">{desc}</p>
 
       <div className="flex gap-6">
-        {/* Cek jika githubLink ada, maka tampilkan linknya */}
-        {githubLink && (
+        {githubLink && githubLink !== "#" && (
           <a href={githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition cursor-pointer">
             <Github size={16} /> Source
           </a>
         )}
-
-        {/* Cek jika demoLink ada, maka tampilkan linknya */}
-        {demoLink && (
+        {demoLink && demoLink !== "#" && (
           <a href={demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition cursor-pointer">
             <ExternalLink size={16} /> Demo
           </a>

@@ -10,15 +10,12 @@ export default function Portfolio() {
           <h1 className="font-bold text-xl tracking-tighter">Nathanael Axl Jaconiah</h1>
           <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400">
             <a href="#about" className="hover:text-white transition">About</a>
+            <a href="#skills" className="hover:text-white transition">Skills</a>
             <a href="#experience" className="hover:text-white transition">Experience</a>
             <a href="#projects" className="hover:text-white transition">Projects</a>
             <a href="#certificates" className="hover:text-white transition">Certificates</a>
           </div>
-          {/* NAVBAR */}
-          <a
-            href="#contact"
-            className="bg-[#1d1f24] hover:bg-[#2a2d35] px-5 py-2 rounded-lg text-sm font-semibold border border-white/10 transition"
-          >
+          <a href="#contact" className="bg-[#1d1f24] hover:bg-[#2a2d35] px-5 py-2 rounded-lg text-sm font-semibold border border-white/10 transition">
             Contact
           </a>
         </div>
@@ -64,6 +61,69 @@ export default function Portfolio() {
               I manage a personal home lab for security research and Cyber Threat Intelligence (CTI) analysis, dedicated to securing systems through a balanced, full-spectrum security approach.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* SKILLS & LANGUAGES SECTION */}
+      <section id="skills" className="max-w-6xl mx-auto py-24 px-6">
+        <h2 className="text-4xl font-bold mb-12">Skills & Languages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          {/* Hard Skills */}
+          <div className="bg-[#0d0f14] border border-white/5 p-10 rounded-3xl flex flex-col h-full">
+            <h3 className="text-blue-400 font-bold mb-8 uppercase tracking-widest text-sm">Hard Skills</h3>
+            <div className="flex flex-wrap gap-3">
+              {[
+                "Cybersecurity", "Networking", "Linux", "Python", "SQL",
+                "Burp Suite", "Nmap", "Wireshark", "Metasploit", "SIEM Tools"
+              ].map((skill) => (
+                <span key={skill} className="bg-white/5 border border-white/10 px-4 py-2 rounded-xl text-sm text-gray-300 hover:bg-white/10 transition-colors">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Soft Skills */}
+          <div className="bg-[#0d0f14] border border-white/5 p-10 rounded-3xl flex flex-col h-full">
+            <h3 className="text-blue-400 font-bold mb-8 uppercase tracking-widest text-sm">Soft Skills</h3>
+            <ul className="text-gray-300 text-base space-y-5">
+              <li className="flex items-center gap-3 border-b border-white/5 pb-2"> Analytical Thinking</li>
+              <li className="flex items-center gap-3 border-b border-white/5 pb-2"> Attention to Detail</li>
+              <li className="flex items-center gap-3 border-b border-white/5 pb-2"> Problem Solving</li>
+              <li className="flex items-center gap-3 border-b border-white/5 pb-2"> Collaboration & Communication</li>
+              <li className="flex items-center gap-3"> Adaptability</li>
+            </ul>
+          </div>
+          <div className="bg-[#0d0f14] border border-white/5 p-10 rounded-3xl flex flex-col h-full lg:col-span-1 md:col-span-2 lg:md:col-span-1">
+            <h3 className="text-blue-400 font-bold mb-8 uppercase tracking-widest text-sm">Languages</h3>
+            <div className="space-y-10 my-auto">
+              <div>
+                <div className="flex justify-between items-end mb-3">
+                  <span className="text-lg font-bold text-white text-gray-400">Bahasa Indonesia</span>
+                  <span className="text-sm text-gray-500 italic">Native</span>
+                </div>
+                <div className="w-full bg-white/5 rounded-full h-3">
+                  <div className="bg-blue-600 h-3 rounded-full w-full shadow-[0_0_15px_rgba(37,99,235,0.3)]"></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-end mb-3">
+                  <span className="text-lg font-bold text-white">English</span>
+                  <span className="text-sm text-gray-500 italic">C1 - Advanced</span>
+                </div>
+                <div className="w-full bg-white/5 rounded-full h-3">
+                  {/* Progress bar dinaikkan ke 92% untuk C1 level */}
+                  <div className="bg-blue-600 h-3 rounded-full w-[92%] shadow-[0_0_15px_rgba(37,99,235,0.3)]"></div>
+                </div>
+                <p className="text-xs text-gray-500 mt-4 leading-relaxed">
+                  Advanced professional proficiency with the ability to express complex ideas fluently and spontaneously.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

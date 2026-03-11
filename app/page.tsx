@@ -101,6 +101,24 @@ export default function Portfolio() {
             date="Mar 2025 - Agu 2025"
             desc="Led the Module Division to design and implement orientation programs for new Informatics students. Managed a team of student PICs, developed structured academic modules, and coordinated cross-division logistics to ensure a seamless transition for first-year students."
           />
+          <ExperienceCard
+            title="Finance Intern"
+            company="PT Trisinar Indopratama (Technoplast)"
+            date="May 2023 - Jul 2023"
+            desc="Assisted the Finance Department in managing financial records and data entry tasks. Collaborated with the team to streamline reporting workflows and ensure the confidentiality of company financial data."
+          />
+          <ExperienceCard
+            title="Event Staff - Freelance"
+            company="Indonesia Game Expo (IGX)"
+            date="Oct 2024"
+            desc="Managed merchandise sales, handled transactions, and provided customer service at ICE BSD City. Supported booth operations to ensure a smooth and engaging experience for event visitors."
+          />
+          <ExperienceCard
+            title="Actor – 75th Production"
+            company="Teater Katak"
+            date="Jul 2024 - Dec 2024"
+            desc="Performed as a stage actor in a major theatrical production. Collaborated with directors and crew to deliver engaging performances, enhancing communication and adaptability skills through intensive rehearsals."
+          />
         </div>
       </section>
 

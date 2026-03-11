@@ -81,7 +81,7 @@ export default function Portfolio() {
           <ExperienceCard 
             title="Coding Mentor"
             company="Timedoor"
-            date="Feb 2025 - July 2025"
+            date="Feb 2025 - Present"
             desc="Guiding and mentoring students in mastering Python programming fundamentals, 
             while simplifying complex coding concepts through hands-on projects in a hybrid learning environment.."
           />
@@ -90,6 +90,12 @@ export default function Portfolio() {
             company="HMIF Gen XV - UMN"
             date="Oct 2024 - Dec 2025"
             desc="Leading organizational programs and supervising technical development teams."
+          />
+          <ExperienceCard 
+            title="Head of PIC Perkenalan Prodi Informatika"
+            company="PPIF UMN 2025"
+            date="Mar 2025 - Agu 2025"
+            desc="Led the Module Division to design and implement orientation programs for new Informatics students. Managed a team of student PICs, developed structured academic modules, and coordinated cross-division logistics to ensure a seamless transition for first-year students."
           />
         </div>
       </section>
